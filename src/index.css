@@ -1,0 +1,54 @@
+body {
+  direction: rtl;
+  background-color: #F9FAFB;
+  margin: 0;
+  font-family: CustomFont1Name !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: CustomFont1Name !important;
+}
+
+/*------------------------------ Font Validation ---------------------------*/
+
+@font-face {
+  font-family: 'CustomFont1Name';
+  src: local('CustomFont1Name'),
+    url('./fonts/iran-sans-5/woff/IRANSansWeb.woff') format('woff'),
+    url('./fonts/iran-sans-5/woff2/IRANSansWeb.woff2') format('woff2');
+}
+
+
+/*------------------------------ NUMBER INPUT ---------------------------*/
+
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  /* display: none; <- Crashes Chrome on hover */
+  -webkit-appearance: none;
+  margin: 0;
+  /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+  /* Firefox */
+}
+
+/*------------------------------ Media Querys ---------------------------*/
+
+@media screen and (max-width: 576px) {
+  .font-1 {
+    font-size: 3vw !important;
+  }
+
+  .font-2 {
+    font-size: 3.5vw !important;
+  }
+
+  .font-3 {
+    font-size: 4vw !important;
+  }
+}
